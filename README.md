@@ -4,7 +4,10 @@
 - [Background](#Background)
 - [Problem Statement](#Problem-Statement)
 - [What is Manga?](#What-is-Manga?)
+- [Webscrape Data Source](#Webscrape-Data-Source)
+- [Libraries Used](#Libraries-Used)
 - [Data Dictionary](#Data-Dictionary)
+- [Folders and Contents](#Folders-and-Contents)
 - [EDA](#EDA)
 - [Recommender System](#Recommender-System)
 - [Business Recommendations](#Business-Recommendations)
@@ -43,7 +46,7 @@ The datasets were webscraped from myanimelist.net
 |data|Scraped data from myanimelist.net.  <br> Contains manga titles, manga details and user scores  <br> This has been stored in the zip file.|
 |data_cleaned|Data that were cleaned for use in EDA and modeling|
 |data_production|csv files to the rankings, similarity matrix and LightFM models|
-|data_titles_based_cf_user_scores|Calculated scores from collaborative filtering for each title and member|
+|data_titles_based_cf_user_scores|Calculated scores from collaborative filtering for each title and member  <br> This has been stored in the zip file.|
 
 
 ### Data Dictionary
@@ -206,11 +209,11 @@ When using lighFM to create a recommender system for the manga recommender, desp
 
 | |train_precision@k|test_precision@k|train_recall@k|test_recall@k|train_auc|test_auc|train_accuracy|test_accuracy|
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-|Basic Model (Warp)|0.132022|0.182901|0.700657|0.110010|0.988722|-|0.2666|0.776845|
+|Basic Model (Warp)|0.132022|0.182901|0.700657|0.110010|0.988722|0.889645|0.2666|0.776845|
 |With Genres as Features|0.102631|0.134173|0.579957|0.080387|0.982738|0.859975|0.1441|0.399746|
-|With Themes as Features|0.117668|0.149033|0.638509|0.088886|0.984754|-|0.1855|0.528753|
+|With Themes as Features|0.117668|0.149033|0.638509|0.088886|0.984754|0.871919|0.1855|0.528753|
 |With Demographic as Features|0.108577|0.157405|0.581739|0.094109|0.980135|0.876193|0.1535|0.434097|
-|With Genres, Themes & Demographic as Features|0.103533|0.125674|0.592820|0.075226|0.982237|-|0.1366|0.380407|
+|With Genres, Themes & Demographic as Features|0.103533|0.125674|0.592820|0.075226|0.982237|0.858835|0.1366|0.380407|
 
 
 #### Final Production Model
